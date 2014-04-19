@@ -9,7 +9,7 @@ LCDKeypad shield is quite common and popular. It includes 16x2 HD44780 compatibl
 
 ## Install
 
-* Download [latest release zip file](releases/latest)
+* Download [latest release zip file](https://github.com/dzindra/LCDKeypad/releases/latest)
 * In Arduino IDE, use _Sketch -> Import Library -> Add Library_ command
 * Select the downloaded zip file
 
