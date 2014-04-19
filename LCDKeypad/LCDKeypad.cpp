@@ -3,9 +3,21 @@
   LCDKeypad Arduino library
   https://github.com/dzindra/LCDKeypad
   
-  written by Jindrich Dolezy (jindrich@dolezy.cz)
+  Copyright 2014 Jindřich Doležy (jindrich@dolezy.cz)
   based on the code by fj604 from http://forum.arduino.cc/index.php?topic=38061.0
 
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 */
 
 #include <Arduino.h>
@@ -55,14 +67,13 @@ uint8_t LCDKeypad::button()
 {
   // read the value from the sensor
   int adc_key_in = analogRead(_button_pin);
-  // my buttons when read are centered at these valies: 0, 144, 329, 504, 741
-  // we add approx 50 to those values and check to see if we are close
-  if (adc_key_in > 1000) return KEYPAD_NONE; // We make this the 1st option for speed reasons since it will be the most likely result
-  if (adc_key_in < 50)   return KEYPAD_RIGHT; 
-  if (adc_key_in < 195)  return KEYPAD_UP;
-  if (adc_key_in < 380)  return KEYPAD_DOWN;
-  if (adc_key_in < 555)  return KEYPAD_LEFT;
-  if (adc_key_in < 790)  return KEYPAD_SELECT;  
+  
+  if (adc_key_in > KEYPAD_TRESHOLD_NONE) return KEYPAD_NONE; // We make this the 1st option for speed reasons since it will be the most likely result
+  if (adc_key_in < KEYPAD_TRESHOLD_RIGHT)   return KEYPAD_RIGHT; // 0 on my board
+  if (adc_key_in < KEYPAD_TRESHOLD_UP)  return KEYPAD_UP; // 133 on my board
+  if (adc_key_in < KEYPAD_TRESHOLD_DOWN)  return KEYPAD_DOWN; // 308 on my board
+  if (adc_key_in < KEYPAD_TRESHOLD_LEFT)  return KEYPAD_LEFT; // 480 on my board
+  if (adc_key_in < KEYPAD_TRESHOLD_SELECT)  return KEYPAD_SELECT;  // 721 on my board
   return KEYPAD_NONE;  // when all others fail, return this...
 }
 
