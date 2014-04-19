@@ -28,6 +28,8 @@ You can optionaly specify button analog pin (default A0) and backlight pin (defa
 
 ## Functions
 
+LCDKeypad extends LiquidCrystal class so you can use all the functions from LiquidCrystal and following new ones:
+
 #### lcdKeypad.noBacklight()
 
 Turn backlight off.
