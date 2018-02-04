@@ -4,7 +4,7 @@ This library allows you to control display, read button state and toggle backlig
 
 LCDKeypad shield is quite common and popular. It includes 16x2 HD44780 compatible LCD and 5 push buttons. Pins 4, 5, 6, 7, 8, 9 are used to interface with the LCD. Backlight on/off function is controlled via pin 10. Analog pin 0 is used to read the buttons.
 
-![alt text](shield.jpg)
+![alt text](extras/shield.jpg)
 
 
 ## Install
@@ -48,7 +48,7 @@ Read filtered button states. After detecting button press for the first time and
 
 ## License
 
-&copy; 2014 Jindřich Doležy.
+&copy; 2014-2018 Jindřich Doležy.
 
 Based on the code by fj604 from http://forum.arduino.cc/index.php?topic=38061.0
 

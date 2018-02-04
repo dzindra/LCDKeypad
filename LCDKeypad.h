@@ -70,7 +70,7 @@ class LCDKeypad : public LiquidCrystal
   	uint8_t _bl_pin;
   	uint8_t _button_pin;
 
-    unsigned long _block_time;
+    uint32_t _block_time;
     uint8_t _last_button;
 
 };
