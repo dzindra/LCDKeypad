@@ -21,7 +21,6 @@
 */
 
 #include <Arduino.h>
-#include <LiquidCrystal.h>
 #include "LCDKeypad.h"
 
 

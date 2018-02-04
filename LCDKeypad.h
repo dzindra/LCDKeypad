@@ -24,6 +24,7 @@
 #define LCDKeypad_h
 
 #include <inttypes.h>
+#include <LiquidCrystal.h>
 
 
 #define KEYPAD_NONE 0
