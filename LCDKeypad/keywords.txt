@@ -14,8 +14,8 @@ LCDKeypad	KEYWORD1
 
 button	KEYWORD2
 buttonBlocking	KEYWORD2
-backlight KEYWORD2
-noBacklight KEYWORD2
+backlight	KEYWORD2
+noBacklight	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
